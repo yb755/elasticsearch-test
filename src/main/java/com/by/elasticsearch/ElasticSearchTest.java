@@ -67,7 +67,7 @@ public class ElasticSearchTest {
 	}
 
 	public static void querySearch(TransportClient client,String index, String type, String term, String queryString) {
-		SearchResponse response = client.prepareSearch(index).setTypes(type)
+		SearchResponse response = client.prepareSearch(index) .setTypes(type)
 		// 设置查询类型
 		// 1.SearchType.DFS_QUERY_THEN_FETCH = 精确查询
 		// 2.SearchType.SCAN = 扫描查询,无序
